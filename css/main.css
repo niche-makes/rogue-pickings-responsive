@@ -42,7 +42,7 @@ p {
     /* padding: 0 1.875em; */
 }
 
-/*The widths are in a percentage!*/
+
 header {
 	/* height: 110px; */
 	/* border-bottom: 3px solid #77a466; */
@@ -50,7 +50,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-flow: column;
 	height: fit-content;
 	padding-top: 20px;
 	text-align: center;
@@ -123,14 +123,6 @@ header nav ul li a{
 	line-height: 1.56em;
 }
 
-.section-one,
-.section-two,
-.section-three {
-	/* width: 33%; */
-	height: auto;
-	/* border-top: 1px solid #eee; */
-}
-
 .section-two {
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
@@ -139,11 +131,6 @@ header nav ul li a{
 .section-one h3 {
 	padding: 10px 0;
 }
-
-/* .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-} */
 
 .section-two h3,
 .section-three h3 {
@@ -186,4 +173,90 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media all and (min-width:768px) {
+    header h1 {
+		padding: 12px 206px;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		height: auto;
+		border-top: none;
+		border-bottom: none;
+}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+
+	.section-two h3,
+	.section-three h3 {
+	padding: 10px 30px;
+	}
+	
+	.bottom-section {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		/* margin: 0 auto; */
+	} 
+	.bottom-section p {
+		padding: 0 1.875em;
+	}
+
+	.section-one ul {
+		padding-right: 1.875em;
+	}
+
+	footer {
+		padding: 0 210px;
+	} 
+
+@media all and (min-width:1200px) {
+    
+	
+	header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		flex-flow: row;
+		height: fit-content;
+		padding-top: 20px;
+		text-align: none;
+	}
+	
+	header h1 {
+		padding: 40px 0 0 0;
+		border-bottom: none;
+		text-align: left;
+	}
+	
+	
+	header nav {
+		padding: 54px 0 40px 0;
+		width: 40%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	header nav ul li {
+		padding: 0;
+		display: inline;
+	}
+
+	.bottom-section {
+		border-bottom: 3px solid #eee;
+	}
+
+	footer {
+		border-top: none;
+	}
 }
